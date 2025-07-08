@@ -59,11 +59,11 @@ export default function Sidebar({ collapsed, setCollapsed }) {
         {items.map((item) => (
           <div key={item.label} className="side-link align-item-center">
             <Link to={item.path} className={`text-decoration-none`}>
-              {location.pathname === item.path ? item.alt_icon : item.icon}
+              {'/' + location.pathname.split('/')[1] === item.path ? item.alt_icon : item.icon}
               {!collapsed && (
                 <span
                   className={`label ${
-                    location.pathname === item.path ? "active" : ""
+                    '/' + location.pathname.split('/')[1] === item.path ? "active" : ""
                   }`}
                 >
                   {item.label}

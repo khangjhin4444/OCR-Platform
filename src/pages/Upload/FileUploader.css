@@ -3,36 +3,55 @@
   border-radius: 10px;
   padding: 40px;
   text-align: center;
-  background: #fff;
+  background: #ffffff;
   cursor: pointer;
   transition: 0.3s;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.upload-container:hover {
+/* .upload-container:hover {
   background-color: #f9f9f9;
-}
+} */
 
 .upload-icon {
-  font-size: 32px;
-  color: #007bff;
   margin-bottom: 10px;
+  width: 40px;
 }
 
 .upload-link {
-  color: #007bff;
+  color: #007aff;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.dropdown {
-  margin-top: 20px;
-}
-
 .dropdown-select {
-  background: #f2f2f2;
+  background-color: #F3F2F2;
   padding: 10px 16px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: none;
   font-weight: bold;
   cursor: pointer;
+  appearance: none;
+  background-image: url('../../assets/chevron-compact-down.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+.dropdown-select:focus {
+  border: none;
+}
+
+.back-btn {
+  background-color: #ccdcff;
+  padding: 10px 12px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
 }
