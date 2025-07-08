@@ -1,0 +1,38 @@
+.upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-container:hover {
+  background-color: #f9f9f9;
+}
+
+.upload-icon {
+  font-size: 32px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.upload-link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dropdown {
+  margin-top: 20px;
+}
+
+.dropdown-select {
+  background: #f2f2f2;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  cursor: pointer;
+}

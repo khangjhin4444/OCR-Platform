@@ -1,0 +1,16 @@
+.card-container {
+  max-width: 150px;
+  height: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2),   /* Bóng bên phải */
+   -3px 0 5px rgba(0, 0, 0, 0.2),   /* Bóng bên trái */
+    0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-container p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+}

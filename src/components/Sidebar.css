@@ -1,0 +1,65 @@
+/* Sidebar container */
+.sidebar {
+  background-color: #F4F4F4;
+  /* transition: width 0.1s ease; */
+  overflow-x: hidden;
+  width: 270px;
+  flex-shrink: 0;
+  min-height: 100%;
+}
+
+/* Thu gọn sidebar */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Logo */
+.logo {
+  margin-left: 5px;
+  width: 70px;
+  /* transition: transform 0.3s ease; */
+}
+
+/* Tiêu đề platform */
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 15px;
+  /* transition: opacity 0.3s ease; */
+}
+
+/* Label cho từng item */
+.label {
+  color: black;
+  font-size: 20px;
+  padding-left: 25px;
+  /* transition: opacity 0.3s ease, margin-left 0.3s ease; */
+  opacity: 1;
+  margin-left: 10px;
+}
+
+/* Khi thu nhỏ thì ẩn label */
+.sidebar.collapsed .label {
+  display: none;
+}
+
+/* Khoảng cách từng item */
+.side-link {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 23px;
+}
+
+/* Icon trong sidebar */
+.sidebar-icon {
+  width: 30px;
+}
+
+.active {
+  font-weight: bolder;
+}
+
+.chevron-img {
+  width: 24px;
+}
