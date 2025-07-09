@@ -1,5 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
+import homeBlue from "../assets/house-door-fill-blue.png"
+import home from '../assets/house-door-fill.png'
+import upload from '../assets/file-earmark-plus-fill.svg'
+import uploadBlue from '../assets/file-earmark-plus-fill-blue.png'
+import document from '../assets/folder-fill.png'
+import documentBlue from '../assets/folder-fill-blue.png'
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const location = useLocation();
@@ -7,14 +13,14 @@ export default function Sidebar({ collapsed, setCollapsed }) {
   const items = [
     {
       icon: (
-        <img className="sidebar-icon" src="../src/assets/house-door-fill.png" />
+        <img className="sidebar-icon" src={home} />
       ),
       label: "Home",
       path: "/",
       alt_icon: (
         <img
           className="sidebar-icon"
-          src="../src/assets/house-door-fill-blue.png"
+          src={homeBlue}
         />
       ),
     },
@@ -22,7 +28,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       icon: (
         <img
           className="sidebar-icon"
-          src="../src/assets/file-earmark-plus-fill.svg"
+          src={upload}
         />
       ),
       label: "Upload/OCR",
@@ -30,16 +36,16 @@ export default function Sidebar({ collapsed, setCollapsed }) {
       alt_icon: (
         <img
           className="sidebar-icon"
-          src="../src/assets/file-earmark-plus-fill-blue.png"
+          src={uploadBlue}
         />
       ),
     },
     {
-      icon: <img className="sidebar-icon" src="src\assets\folder-fill.png" />,
+      icon: <img className="sidebar-icon" src={document} />,
       label: "My Documents",
       path: "/documents",
       alt_icon: (
-        <img className="sidebar-icon" src="src\assets\folder-fill-blue.png" />
+        <img className="sidebar-icon" src={documentBlue} />
       ),
     },
   ];

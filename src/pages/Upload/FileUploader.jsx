@@ -1,13 +1,16 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import uploadIcon from '../../assets/upload.png'
 import "./FileUploader.css"; 
 
 export default function FileUploader() {
+  const {docType} = useParams()
   const navigate = useNavigate();
   const onDrop = useCallback((acceptedFiles) => {
     console.log("Dropped or selected files:", acceptedFiles);
     // TODO: Gửi file lên server hoặc xử lý tại đây
+    navigate('/upload/result',{ state: { file: acceptedFiles[0], type: docType } })
   }, []);
 
   const { getRootProps, getInputProps, open } = useDropzone({
@@ -21,7 +24,7 @@ export default function FileUploader() {
       <div className="upload-container mb-5" {...getRootProps()}>
         <input {...getInputProps()} />
         <div className="upload-icon">
-          <img className="img-fluid" src="../src/assets/upload.png" alt="" />
+          <img className="img-fluid" src={uploadIcon} alt="" />
         </div>
         <p className="fs-5 fw-bold">
           Drop files here, or{" "}
