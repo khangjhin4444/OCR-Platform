@@ -58,7 +58,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
     >
       <div className="h-100">
         <div className="d-flex align-items-center">
-          <img className="logo" src="../src/assets/tensor_logo 1.png" alt="" />
+          <img className="logo" src="/tensor_logo 1.png" alt="" />
 
           {!collapsed && <p className="title">OCR Platform</p>}
         </div>
