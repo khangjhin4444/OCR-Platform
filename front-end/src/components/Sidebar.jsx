@@ -16,7 +16,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
         <img className="sidebar-icon" src={home} />
       ),
       label: "Home",
-      path: "/",
+      path: "/home",
       alt_icon: (
         <img
           className="sidebar-icon"

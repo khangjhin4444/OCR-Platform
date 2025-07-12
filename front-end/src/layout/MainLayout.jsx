@@ -19,7 +19,7 @@ export default function MainLayout() {
   return (
     <div className="d-flex" style={{ minHeight: "100vh" }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
-      <div className="flex-grow-1 px-3">
+      <div className="flex-grow-1 px-3 overflow-auto">
         <Header />
         <Outlet />
       </div>

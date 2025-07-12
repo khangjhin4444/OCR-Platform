@@ -1,0 +1,15 @@
+/* .table-bordered td, .table-bordered th {
+  border-style: dashed !important;
+} */
+
+.download-btn, .edit-btn {
+  border: none;
+  background-color: white;
+}
+
+.download-btn img, .edit-btn img{
+  width: 20px;
+}
+.table td {
+  line-height: 2.5;
+}
