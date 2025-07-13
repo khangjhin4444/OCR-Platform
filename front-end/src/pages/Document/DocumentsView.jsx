@@ -1,31 +1,14 @@
 import { useState, useRef } from "react";
 import "./DocumentsView.css";
 import DocumentTable from "./DocumentTable";
+import { documentListPerType } from "../../data/documentListPerType";
 
 export default function DocumentsView() {
   const nameRef = useRef(null);
   const dateRef = useRef(null);
   const [inputSearch, setInputSearch] = useState("");
 
-  let data = [
-    {
-      name: "a",
-      tags: "invoice,east_repair",
-      date: "03 Jul 2025",
-    },
-    {
-      name: "b",
-      tags: "invoice,east_repair",
-      date: "04 Jul 2025",
-    },
-    {
-      name: "c",
-      tags: "invoice,east_repair",
-      date: "05 Jul 2025",
-    },
-  ];
-
-  const [tableData, setTableData] = useState(data);
+  const [tableData, setTableData] = useState(documentListPerType);
 
   function handleChangeName(value) {
     if (value === "asc") {

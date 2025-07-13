@@ -8,3 +8,29 @@
   font-weight: 500;
   color: #2563EB;
 }
+
+.login-btn {
+  border: 2px solid #2563EB;
+  border-radius: 15px;
+  padding: 6px 40px;
+  color: #2563EB;
+  background-color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.register-btn {
+  background-color: #2563EB;
+  color: white;
+  border-radius: 15px;
+  padding: 6px 26px;
+  font-weight: bold;
+  font-size: 25px;
+  border: none;
+}
+
+@media screen and (max-width: 992px) {
+  .btn-container {
+    justify-content: center !important;
+  }
+}
