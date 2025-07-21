@@ -7,7 +7,7 @@ import FileUploader from './pages/Upload/FileUploader';
 import Result from './pages/Upload/Result';
 import MyDocuments from  './pages/Document/MyDocuments'
 import DocumentsView from './pages/Document/DocumentsView';
-
+import Ocr from './pages/Ocr/Ocr';
 
 export default function App() {
   return (
@@ -20,6 +20,7 @@ export default function App() {
           <Route path="/upload" element={<SelectType />} />
           <Route path="/upload/:docType" element={<FileUploader />} />
           <Route path="/upload/result" element={<Result />} />
+          <Route path="/ocr" element={<Ocr />} />
           <Route path="/documents" element={<MyDocuments />} />
           <Route path='/documents/:doctype' element={<DocumentsView />}></Route>
         </Route>

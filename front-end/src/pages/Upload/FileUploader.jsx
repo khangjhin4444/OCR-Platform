@@ -11,6 +11,7 @@ export default function FileUploader() {
     console.log("Dropped or selected files:", acceptedFiles);
     // TODO: Gửi file lên server hoặc xử lý tại đây
     navigate('/upload/result',{ state: { file: acceptedFiles[0], type: docType } })
+    // navigate('/upload')
   }, []);
 
   const { getRootProps, getInputProps, open } = useDropzone({

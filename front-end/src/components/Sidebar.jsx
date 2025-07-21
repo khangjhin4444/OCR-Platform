@@ -6,6 +6,8 @@ import upload from '../assets/file-earmark-plus-fill.svg'
 import uploadBlue from '../assets/file-earmark-plus-fill-blue.png'
 import document from '../assets/folder-fill.png'
 import documentBlue from '../assets/folder-fill-blue.png'
+import ocr from '../assets/file-text.svg'
+import ocrBlue from '../assets/file-text-blue.svg'
 
 export default function Sidebar({ collapsed, setCollapsed }) {
   const location = useLocation();
@@ -31,13 +33,21 @@ export default function Sidebar({ collapsed, setCollapsed }) {
           src={upload}
         />
       ),
-      label: "Upload/OCR",
+      label: "Upload",
       path: "/upload",
       alt_icon: (
         <img
           className="sidebar-icon"
           src={uploadBlue}
         />
+      ),
+    },
+    {
+      icon: <img className="sidebar-icon" src={ocr} />,
+      label: "OCR Results",
+      path: "/ocr",
+      alt_icon: (
+        <img className="sidebar-icon" src={ocrBlue} />
       ),
     },
     {

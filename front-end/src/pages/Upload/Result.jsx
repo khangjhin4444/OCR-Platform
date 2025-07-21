@@ -4,6 +4,7 @@ import Field from "./Field";
 import "./Result.css";
 import downloadIcon from "../../assets/box-arrow-in-down.png";
 import { ocrRes } from "../../data/ocrRes";
+import { ocrResTable } from "../../data/ocrResTable";
 
 export default function Result() {
   const location = useLocation();
@@ -116,7 +117,28 @@ export default function Result() {
           </div>
 
           <p className="fs-5 mb-3">Table</p>
-          <div className="table-container"></div>
+          <div className="table-container">
+            <div className="table-responsive mt-3">
+              <table className="table table-borderless">
+                <thead>
+                  <tr>
+                    {ocrResTable.labels.map((label, index) => (
+                      <th key={index}>{label}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {ocrResTable.rows.map((item, index) => (
+                    <tr key={index}>
+                      <td>{item.description}</td>
+                      <td>{item.unitPrice}</td>
+                      <td>{item.amount}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
 
           <p className="fs-5 mb-3">Tags</p>
           <input

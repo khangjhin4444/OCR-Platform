@@ -29,7 +29,6 @@
   overflow: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  background-color: lightgray;
 }
 
 .tag-input {
