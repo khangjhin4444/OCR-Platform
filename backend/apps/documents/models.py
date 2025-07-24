@@ -12,7 +12,8 @@ class OCRDocument(models.Model):
     name = models.CharField(max_length=255, default='untitled_document')
     tag = models.CharField(max_length=255, default='general')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
-    file_url = models.URLField(max_length=255, default='http://example.com/placeholder.pdf')
+    #file_url = models.URLField(max_length=255, default='http://example.com/test.pdf')
+    file = models.FileField(upload_to='uploads/', null=True, blank=True)
     uploaded_at = models.DateTimeField(default=timezone.now)
     folder_id = models.ForeignKey('Folder', on_delete=models.CASCADE, related_name='documents', null=True, blank=True)
     
@@ -49,3 +50,4 @@ class User(models.Model):
 
     def __str__(self):
         return self.username
+    

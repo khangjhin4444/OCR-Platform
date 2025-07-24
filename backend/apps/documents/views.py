@@ -22,7 +22,7 @@ class document_list(generics.ListCreateAPIView):
     permission_classes = [permissions.AllowAny]  
 
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['type', 'status']
+    filterset_fields = ['tag', 'status']
 
     def get_queryset(self):
         return OCRDocument.objects.all()

@@ -4,15 +4,7 @@ from .models import OCRDocument, Document_result, Folder, User
 class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = OCRDocument
-        fields = [
-            "id",
-            "name",
-            "tag",
-            "status",
-            "file_url",
-            "uploaded_at",
-            "folder_id",
-        ]
+        fields = '__all__'
 
 class DocumentResultSerializer(serializers.ModelSerializer):
     class Meta:
